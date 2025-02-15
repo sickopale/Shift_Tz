@@ -10,7 +10,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        final String path="F:\\Shift_tz\\src\\main\\resources\\input.txt";
+        final String path="src\\main\\resources\\input.txt";
 
         Args arguments=new Args();
         arguments.setOriginalArgs(args);
