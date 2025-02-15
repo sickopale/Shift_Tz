@@ -7,7 +7,10 @@ import model.Args;
 import java.util.*;
 
 public class App {
+
     public static void main(String[] args) {
+
+        final String path="F:\\Shift_tz\\src\\main\\resources\\input.txt";
 
         Args arguments=new Args();
         arguments.setOriginalArgs(args);
@@ -23,7 +26,6 @@ public class App {
             System.exit(0);
         }
 
-        final String path="F:\\Shift_tz\\src\\main\\resources\\input.txt";
         runApp(arguments,path);
 
     }

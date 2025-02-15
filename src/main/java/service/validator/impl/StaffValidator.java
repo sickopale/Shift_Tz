@@ -34,7 +34,7 @@ public class StaffValidator implements Validator {
         boolean isValid = Stream.of(
                 validatePosition(position),
                 validateStaffId(id),
-                validateUniqueId(id, line),
+                validateUniqueId(id),
                 validateSalary(salary)
         ).allMatch(Boolean::booleanValue);
 
@@ -46,10 +46,7 @@ public class StaffValidator implements Validator {
     }
 
     private boolean validatePosition(String position) {
-        if (!existingPositions.contains(position)) {
-            return false;
-        }
-        return true;
+        return existingPositions.contains(position);
     }
 
     private boolean validateStaffId(String id) {
@@ -67,7 +64,7 @@ public class StaffValidator implements Validator {
         return true;
     }
 
-    private boolean validateUniqueId(String id, String line) {
+    private boolean validateUniqueId(String id) {
         try {
             long value = Long.parseLong(id);
             if (!uniqueIds.add(value)) {

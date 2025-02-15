@@ -3,7 +3,6 @@ package model;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -12,7 +11,6 @@ import java.util.List;
 @Getter
 @Setter
 @AllArgsConstructor
-@ToString
 public class Department {
 
     private Manager manager;

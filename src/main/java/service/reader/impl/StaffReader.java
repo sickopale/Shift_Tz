@@ -6,6 +6,7 @@ import service.processor.StaffProcessor;
 import service.reader.Reader;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -20,8 +21,10 @@ public class StaffReader implements Reader {
             while ((line = br.readLine()) != null) {
                 dataProcessor.processDataLine(line);
             }
+        } catch (FileNotFoundException e) {
+            System.out.println("Файл не найден: " + e.getMessage());
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Ошибка при чтении файла: " + e.getMessage());
         }
     }
 }

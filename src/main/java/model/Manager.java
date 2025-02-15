@@ -1,10 +1,10 @@
 package model;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter
-@ToString(callSuper = true)
 public class Manager extends Staff{
 
     private String department;
